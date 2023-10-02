@@ -1,4 +1,5 @@
 #include "main.h"
+#define NULL 0
 /**
  * _strpbrk - Entry point
  * @s: input
@@ -21,5 +22,5 @@ char *_strpbrk(char *s, char *accept)
 	}
 
 
-return ('\0');
+	return (NULL);
 }
