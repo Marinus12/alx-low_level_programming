@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main_h"
+#include "main.h"
 /**
   * main - Print the number if arguments passed
   * @argc: Counts arguments
