@@ -7,7 +7,7 @@
   * @argv: Arguments vector
   * Return: 0 if works,1 if there's ERROR
   */
-int main(int argc char *argv[])
+int main(int argc, char *argv[])
 {
 	int n, m, diff;
 
