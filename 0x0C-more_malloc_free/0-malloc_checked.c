@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-  * malloc_checked - Terminate with a status value 98 
-  * @b: allocated memory 
+  * malloc_checked - Terminate with a status value 98
+  * @b: allocated memory
   * Author: Marinus
   *Return:a pointer to the allocated memory
   */
