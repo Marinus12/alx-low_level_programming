@@ -106,6 +106,7 @@ void print_array(char *a, int nb)
 		_putchar(a[i]);
 	}
 	_putchar('\n');
+	free(a);
 }
 
 /**
