@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-  * malloc_checked - Terminate with a status value 98 if failed
+  * malloc_checked - Terminate with a status value 98 
   * @b: allocated memory 
   * Author: Marinus
-  *Return: 0 means program is a success
+  *Return:a pointer to the allocated memory
   */
 void *malloc_checked(unsigned int b)
 {
@@ -15,4 +15,5 @@ void *malloc_checked(unsigned int b)
 		exit(98);
 
 	return (ptr);
+
 }
