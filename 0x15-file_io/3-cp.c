@@ -1,21 +1,46 @@
 #include "main.h"
 #define BUFSIZE 1024
 
-/**
-  * error_exit - prints an error message and exits with a specified code
-  * @code: exit code
-  * @format: format string for the error message
-  *
-  * Return: ...
-  */
-void error_exit(int code, const char *format, ...)
-{
-	va_list args;
+char *create_buffer(char *file);
+void close_file(int fd);
 
-	va_start(args, format);
-	dprintf(STDERR_FILENO, format, args);
-	va_end(args);
-	exit(code);
+/**
+ * create_buffer - Allocates 1024 bytes for a buffer.
+ * @file: The name of the file buffer is storing chars for.
+ *
+ * Return: A pointer to the newly-allocated buffer.
+ */
+char *create_buffer(char *file)
+{
+	char *buffer;
+
+	buffer = malloc(sizeof(char) * 1024);
+
+	if (buffer == NULL)
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Can't write to %s\n", file);
+		exit(99);
+	}
+
+	return (buffer);
+}
+
+/**
+ * close_file - Closes file descriptors.
+ * @fd: The file descriptor to be closed.
+ */
+void close_file(int fd)
+{
+	int c;
+
+	c = close(fd);
+
+	if (c == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 }
 
 /**
