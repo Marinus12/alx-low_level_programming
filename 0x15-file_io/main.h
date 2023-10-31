@@ -6,6 +6,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <stdarg.h>
+#include <elf.h>
 
 void error_exit(int code, const char *format, ...);
 ssize_t read_textfile(const char *filename, size_t letters);
