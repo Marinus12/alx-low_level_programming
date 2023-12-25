@@ -8,7 +8,7 @@
   * Return: if the key cannot be matched - NULL
   *	otherwise - the value associated with key in ht
   */
-char *hash_table_get(const hash_table_t *ht, const *key)
+char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	hash_node_t *node;
 	unsigned long int index;
